@@ -51,47 +51,199 @@ html, body { height: 100%; }
   }
 }
 .container { min-height: 100vh; }
-.header {
+
+
+
+
+
+
+
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+
+
+
+.container1 {
+  max-width: 1110px;
+  padding: 0 15px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.header1 .container1 {
+  display: flex;
+  justify-content: space-between;
   margin: 0 auto;
   padding: 50px;
   @include flex-spacebetween-row();
   font-family: $font;
   align-items: center;
-  span {
-    color: #e6606c;
-  }
+  
+}
 
-  .menu a {
-    font-family: Barlow;
+.header1 .logo {
+  
+ 
+  font-weight: 600;
+  color:  #ffffff;
+  font-family: Barlow;
+font-size: 32px;
+font-weight: 800;
+line-height: 38.4px;
+text-align: left;
+
+ 
+}
+
+.header1 .logo span {
+  color: #e6606c;
+}
+
+
+
+.navbar1 {
+  width: 100vw;
+  background-color: rgba(0.8, 0.8, 0.8, 0.6);
+  backdrop-filter: blur(5px);
+  position: fixed;
+  top: 0;
+  right: -100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  transition: 0.4s ease;
+} 
+
+.navbar1 a {
+       font-family: Barlow;
     font-size: 14px;
     font-weight: 400;
     line-height: 16.8px;
     text-align: left;
-    color: $fontColor;
+    color:  #ffffff;
+  transition: 0.4s ease;
 
-
-  }
-  .logo {
-    font-family: Barlow;
-    font-size: 32px;
-    font-weight: 800;
-    line-height: 38.4px;
-    text-align: left;
-    color: $fontColor;
-    
-      text-decoration: none;
-    
-     }
-
+top: 42px;
+left: 971px;
+gap: 33px;
+opacity: 0px;
 
 }
-.item {
-  @include flex-spacebetween-row();
-  gap: 10px;
-  a{
-    text-decoration: none;
-  }
+
+.navbar1 a:hover {
+  color: #3a74fc;
 }
+
+#toggle {
+  display: none;
+}
+
+#toggle:checked ~ .navbar1{
+  right: 0;
+  z-index: 1;
+}
+
+
+#toggle:checked ~ .navbar1 a {
+  color: white;
+}
+
+.hamburger {
+  z-index: 9999;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  display: grid;
+  place-items: center;
+}
+
+.hamburger span {
+  display: block;
+  width: 32px;
+  height: 3px;
+  background-color: rgb(155, 160, 158);
+  position: relative;
+  transition: 0.4s ease;
+}
+
+.hamburger span::before,
+.hamburger span::after {
+  transition: 0.4s ease;
+  position: absolute;
+  content: "";
+  display: block;
+  width: 35px;
+  height: 3px;
+  background-color: rgb(39, 255, 176);
+}
+
+.hamburger span::before {
+  top: -7px;
+}
+
+.hamburger span::after {
+  bottom: -7px;
+  width: 29px;
+}
+
+#toggle:checked ~ .hamburger span {
+  transform: rotate(45deg);
+  background-color: white;
+}
+
+#toggle:checked ~ .hamburger span::before {
+  transform: rotate(90deg);
+  background-color: white;
+  top: 0;
+  width: 32px;
+}
+
+#toggle:checked ~ .hamburger span::after {
+  display: none;
+}
+
+
+
+
+
+//   .menu a {
+
+
+
+//   }
+//   .logo {
+//     font-family: Barlow;
+//     font-size: 32px;
+//     font-weight: 800;
+//     line-height: 38.4px;
+//     text-align: left;
+//     color: $fontColor;
+    
+//       text-decoration: none;
+    
+//      }
+
+
+// }
+// .item {
+//   @include flex-spacebetween-row();
+//   gap: 10px;
+//   a{
+//     text-decoration: none;
+//   }
+// }
 // ________________________________________________________________________
 .titleContainerLeftTop {
   border-radius: 75px 0px 0px 0px;
@@ -213,21 +365,23 @@ html, body { height: 100%; }
     left: 250px;
     top: 5px;
   }
-  // .woman {
-  //   max-width: 730px;
-  //   height: 747px;
-  // }
+  .woman {
+    max-width: 730px;
+    height: 747px;
+    padding-left: 160px;
+  }
 }
 .button {
   padding: 30px;
 }
 .firstMainContainerGrid {
-  margin-top: 100px;
+
   display: flex;
   margin: 0 auto;
   flex-direction: row;
   justify-content: center;
   margin-top:100px ;
+  
 }
 
 .loremContainer {
@@ -591,7 +745,7 @@ margin: 0 auto;
   }
 }
 
-@media screen and (max-width: 480) {
+@media screen and (min-width: 480) {
   .title-container p {
     width: 100%;
   }
@@ -618,5 +772,27 @@ margin: 0 auto;
   .loremContainer {
     padding: 30px;
     margin: 0 auto;
+  }
+}
+@media screen and (min-width: 728px) {
+  .navbar1 {
+    all: unset;
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .navbar1 a {
+     color:  #ffffff;
+    transition: 0.4s ease;
+  }
+
+  .navbar1 a:hover {
+    color: #3a74fc !important;
   }
 }
