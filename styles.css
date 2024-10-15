@@ -57,6 +57,7 @@ html, body {
   line-height: 38.4px;
   text-align: left;
   color: #ffffff;
+  text-decoration: none;
 }
 
 .item {
@@ -64,6 +65,9 @@ html, body {
   justify-content: space-between;
   flex-direction: row;
   gap: 10px;
+}
+.item a {
+  text-decoration: none;
 }
 
 .titleContainerLeftTop {
@@ -181,10 +185,6 @@ html, body {
   left: 250px;
   top: 5px;
 }
-.title-container .woman {
-  max-width: 730px;
-  height: 747px;
-}
 
 .button {
   padding: 30px;
@@ -193,10 +193,8 @@ html, body {
 .firstMainContainerGrid {
   margin-top: 100px;
   display: flex;
-  margin: 0 auto;
   flex-direction: row;
-  justify-content: center;
-  margin-top: 100Px;
+  justify-content: space-between;
 }
 
 .loremContainer {

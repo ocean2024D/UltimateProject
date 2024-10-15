@@ -68,6 +68,8 @@ html, body { height: 100%; }
     line-height: 16.8px;
     text-align: left;
     color: $fontColor;
+
+
   }
   .logo {
     font-family: Barlow;
@@ -76,11 +78,19 @@ html, body { height: 100%; }
     line-height: 38.4px;
     text-align: left;
     color: $fontColor;
-  }
+    
+      text-decoration: none;
+    
+     }
+
+
 }
 .item {
   @include flex-spacebetween-row();
   gap: 10px;
+  a{
+    text-decoration: none;
+  }
 }
 // ________________________________________________________________________
 .titleContainerLeftTop {
@@ -116,7 +126,7 @@ html, body { height: 100%; }
     letter-spacing: 0.045em;
     text-align: left;
     text-transform: uppercase;
-     animation: colorAnimation 3s infinite; // Adjust the duration as needed
+     animation: colorAnimation 3s infinite; 
   }
   h1::before {
     content: url(images/deko3.png);
@@ -203,10 +213,10 @@ html, body { height: 100%; }
     left: 250px;
     top: 5px;
   }
-  .woman {
-    max-width: 730px;
-    height: 747px;
-  }
+  // .woman {
+  //   max-width: 730px;
+  //   height: 747px;
+  // }
 }
 .button {
   padding: 30px;
@@ -214,11 +224,9 @@ html, body { height: 100%; }
 .firstMainContainerGrid {
   margin-top: 100px;
   display: flex;
-  margin: 0 auto;
+  // margin: 0 auto;
   flex-direction: row;
-  justify-content: center;
-margin-top: 100Px;
- 
+  justify-content: space-between;
 }
 
 .loremContainer {
@@ -537,6 +545,7 @@ height:100% ;
   justify-content: last baseline;
   flex-direction: column;
   gap: 20px;
+  
 }
 
 //responsive
