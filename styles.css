@@ -193,8 +193,10 @@ html, body {
 .firstMainContainerGrid {
   margin-top: 100px;
   display: flex;
+  margin: 0 auto;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
+  margin-top: 100px;
 }
 
 .loremContainer {
