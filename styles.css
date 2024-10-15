@@ -8,7 +8,10 @@
 
 body {
   margin: 0 auto;
-  background-color: #000000;
+}
+
+html, body {
+  height: 100%;
 }
 
 .container {
@@ -21,6 +24,10 @@ body {
 }
 .container li {
   list-style: none;
+}
+
+.container {
+  min-height: 100vh;
 }
 
 .header {

@@ -36,9 +36,9 @@ $weight: 800;
 body {
   //   max-width: 1440px;
   margin: 0 auto;
-  background-color: #000000;
+ 
 }
-
+html, body { height: 100%; }
 .container {
   background: linear-gradient(236.56deg, #2c2d65 0.35%, #201f22 100%);
   text-decoration: $textDecoration;
@@ -50,7 +50,7 @@ body {
     list-style: $listStyle;
   }
 }
-
+.container { min-height: 100vh; }
 .header {
   margin: 0 auto;
   padding: 50px;
@@ -99,12 +99,7 @@ body {
   }
 }
 .title-container {
-  // padding: 30px;
-  // background-image: url(images/deko3.png);
-  // background-repeat: no-repeat;
-  // background-size: 200px;
-  // background-position: top left;
-  // z-index: -1;
+
   padding: 60px;
   max-width: 670px;
   top: 233px;
